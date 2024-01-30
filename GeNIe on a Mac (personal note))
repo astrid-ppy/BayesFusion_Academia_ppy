@@ -1,0 +1,38 @@
+###
+### modify from https://support.bayesfusion.com/docs/GeNIe/introduction_geniemac.html
+###
+
+Running 32-bit GeNIe Academic on macOS with Wine
+
+1.Install the wine-crossover package on your Mac using homebrew. The package contains code developed for the commercial Crossover product, but is free to download and use.
+
+```
+brew install --cask --no-quarantine gcenx/wine/wine-crossover
+```
+
+
+2.Download 32-bit GeNIe installer, either EXE or MSI.
+
+
+3.Run "Wine Crossover" from Launchpad.  This opens the Terminal window configured to run Windows programs. In Wine Crossover's terminal, use the following command to run the MSI installer. The example below assumes that the installer is located in user's *Desktop* folder, and its filename is genie-academic-setup-4.1.3724-x64.msi.
+
+```
+wine msiexec /i ~/Desktop/genie-academic-setup-4.1.3724-x86.msi
+```
+
+4.In Wine's terminal, use the cd command to navigate to GeNIe's installation directory. Assuming that GeNIe was installed in its default location, the command is:
+
+```
+cd ".wine/drive_c/Program Files (x86)/GeNIe Academic 4.1"
+```
+
+Note that quotes are required, because some of the directories' names contain spaces.
+
+
+5.After changing the directory, run GeNIe:
+
+```
+wine genie.exe
+```
+
+This starts GeNIe using appropriate Wine configuration.
